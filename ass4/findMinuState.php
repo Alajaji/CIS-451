@@ -40,7 +40,7 @@ FROM
         AND (c.customer_num = o.customer_num)
 WHERE
     s.manu_code LIKE '%".$manu_code."%'
-    GROUP BY s.description";
+    GROUP BY description";
 
 ?>
 
@@ -64,7 +64,7 @@ print "<pre>";
 while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
   {
     print "\n";
-    print "$row[description]";
+    print "$row[description] $row[total_spent]";
   }
 print "</pre>";
 
