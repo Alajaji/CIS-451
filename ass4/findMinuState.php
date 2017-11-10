@@ -64,7 +64,7 @@ print "<pre>";
 while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
   {
     print "\n";
-    print "$row[s.description]";
+    print "$row[description]";
   }
 print "</pre>";
 
