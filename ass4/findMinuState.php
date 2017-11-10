@@ -87,7 +87,7 @@ mysqli_close($conn);
 <hr>
 
 <p>
-<a href="findManuState.txt" >Contents</a>
+<a href="findMinuState.txt" >Contents</a>
 of the PHP program that created this page. 	 
  
 </body>
