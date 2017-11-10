@@ -61,10 +61,18 @@ $result = mysqli_query($conn, $query)
 or die(mysqli_error($conn));
 
 print "<pre>";
-while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
+print " ==========================";
+print "\n";
+print " description | total_spent ";
+print "\n";
+print " ==========================";
+print "\n";
+
+while($row = mysqli_fetch_array($result, MYSQLI_BOTH))  
   {
     print "\n";
-    print "$row[description] $row[total_spent]";
+    print " -------------------------";
+    print "$row[description] | $row[total_spent]";
   }
 print "</pre>";
 
@@ -78,7 +86,7 @@ mysqli_close($conn);
 <hr>
 
 <p>
-<a href="findCustState.txt" >Contents</a>
+<a href="findManuState.txt" >Contents</a>
 of the PHP program that created this page. 	 
  
 </body>
