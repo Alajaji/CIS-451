@@ -72,6 +72,7 @@ while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
   {
     print "\n";
     print " -------------------------";
+    print "\n";
     print "$row[description] | $row[total_spent]";
   }
 print "</pre>";
