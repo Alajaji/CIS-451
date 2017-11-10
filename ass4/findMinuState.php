@@ -9,7 +9,7 @@ or die('Error connecting to MySQL server.');
 
 <html>
 <head>
-  <title>Another Simple PHP-MySQL Program</title>
+  <title></title>
   </head>
   
   <body bgcolor="white">
@@ -44,15 +44,6 @@ WHERE
 
 ?>
 
-<p>
-The query:
-<p>
-<?php
-print $query;
-?>
-
-<hr>
-<p>
 Result of query:
 <p>
 
@@ -70,10 +61,11 @@ print "\n";
 
 while($row = mysqli_fetch_array($result, MYSQLI_BOTH))  
   {
-    print "\n";
-    print " -------------------------";
+    
     print "\n";
     print "$row[description] | $row[total_spent]";
+    print "\n";
+    print " -------------------------";
   }
 print "</pre>";
 
