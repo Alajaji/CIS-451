@@ -39,9 +39,9 @@ FROM
         AND (o.order_num = i.order_num)
         AND (c.customer_num = o.customer_num)
 WHERE
-    s.manu_code LIKE '%''".($manu_code)."''%'
-    GROUP BY description;";
-
+    s.manu_code LIKE '%".$manu_code."%'
+    GROUP BY description";
+  
 ?>
 
 <p>
