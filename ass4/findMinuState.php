@@ -4,8 +4,7 @@ include('connectionData.txt');
 
 $conn = mysqli_connect($server, $user, $pass, $dbname, $port)
 or die('Error connecting to MySQL server.');
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+
 ?>
 
 <html>
@@ -79,8 +78,8 @@ mysqli_close($conn);
 <hr>
 
 <p>
-
-	 
+<a href="findCustState.txt" >Contents</a>
+of the PHP program that created this page. 	 
  
 </body>
 </html>
