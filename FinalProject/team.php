@@ -23,8 +23,6 @@ or die('Error connecting to MySQL server.');
 $team = $_POST['team'];
 
 $team = mysqli_real_escape_string($conn, $team);
-// this is a small attempt to avoid SQL injection
-// better to use prepared statements
 
 $query = "SELECT 
     p.name, pos.position
@@ -45,7 +43,6 @@ The query:
 
 <hr>
 <p>
-print t.name:
 <p>
 
 <?php
