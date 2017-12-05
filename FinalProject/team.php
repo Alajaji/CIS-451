@@ -41,12 +41,11 @@ FROM
 The query:
 <p>
 <?php
-print $query;
 ?>
 
 <hr>
 <p>
-print $team:
+print t.name:
 <p>
 
 <?php
@@ -65,7 +64,7 @@ while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
   {
     print "\n";
     print " -------------------------";
-    print "$row[Player] | $row[Position]";
+    print "$row[p.name] | $row[pos.position]";
   }
 print "</pre>";
 
