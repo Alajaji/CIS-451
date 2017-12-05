@@ -33,7 +33,7 @@ FROM
     JOIN Team t ON (t.id = p.Team_id)
     AND (pos.pos_code = pp.Position_pos_code)
     AND (p.name = pp.Player_name)
-    WHERE t.name LIKE '%".$team."%'";
+    WHERE t.id LIKE '%".$team."%'";
 
 ?>
 
