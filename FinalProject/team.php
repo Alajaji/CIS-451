@@ -43,6 +43,7 @@ FROM
 <?php
 $result = mysqli_query($conn, $query)
 or die(mysqli_error($conn));
+<th>$team</th>
 echo "<table border='1'>
 <tr>
 <th>Players</th>
