@@ -59,6 +59,7 @@ while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
   }
 echo "</table>";
 print "Maneger:" ." ". $man;
+print "/n"
 print "City:" ." ". $cname;
 mysqli_free_result($result);
 mysqli_close($conn);
@@ -69,7 +70,7 @@ mysqli_close($conn);
 <hr>
 
 <p>
-<a href="team.txt" >Contents</a>
+<a href="teamsum.txt" >Contents</a>
 of the PHP program that created this page.   
  
 </body>
