@@ -50,13 +50,16 @@ echo "<table border='1'>
 </tr>";
 while($row = mysqli_fetch_array($result, MYSQLI_BOTH))  
   {
+    $man = "$row[maneger]";
+    $cname = "$row[City_name]";
+
   echo "<tr>";
   echo "<td>" . $row[Players] ."</td>";;
   echo "</tr>";
   }
 echo "</table>";
-print "Maneger:" ." ". "$row[maneger]";
-print "City:" ." ". "$row[City_name]";
+print "Maneger:" ." ". $man;
+print "City:" ." ". $cname;
 mysqli_free_result($result);
 mysqli_close($conn);
 
