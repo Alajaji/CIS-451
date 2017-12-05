@@ -52,7 +52,7 @@ while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
   {
   echo "<tr>";
   echo "<td>" . $row[name] ."</td>";
-  echo "<td>" . $row[positio] . "</td>";
+  echo "<td>" . $row[position] . "</td>";
   echo "</tr>";
   }
 echo "</table>";
