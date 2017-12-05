@@ -28,7 +28,7 @@ FROM
     (title tit, Team_has_title tt)
     JOIN Team t ON (t.id = tt.Team_id)
     AND (tt.title_id = tit.id)
-    WHERE t.name LIKE '%.$team.%'";
+    WHERE t.name LIKE '%".$team."%'";
 ?>
 
 
