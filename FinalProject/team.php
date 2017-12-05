@@ -8,6 +8,7 @@ or die('Error connecting to MySQL server.');
 ?>
 
 <html>
+	<center>
 <head>
   <title>Team Players</title>
   </head>
@@ -81,5 +82,6 @@ mysqli_close($conn);
 of the PHP program that created this page. 	 
  
 </body>
+	</center>
 </html>
 	  
