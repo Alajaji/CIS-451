@@ -31,12 +31,11 @@ FROM
     JOIN Team t ON (t.id = p.Team_id)
     AND (pos.pos_code = pp.Position_pos_code)
     AND (p.name = pp.Player_name)
-    WHERE t.id LIKE '%".$team."%'";
+    WHERE t.name LIKE '%".$team."%'";
 
 ?>
 
 <p>
-The query:
 <p>
 <?php
 ?>
