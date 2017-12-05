@@ -55,14 +55,14 @@ echo "<table border='1'>
 <th>Players</th>
 <th>Position</th>
 </tr>";
-
 while($row = mysqli_fetch_array($result, MYSQLI_BOTH))  
   {
-  echo "<tr>";
-  echo "<td>" . $row[name] ."</td>";
-  echo "<td>" . $row[positio] . "</td>";
-  echo "</tr>";
+    print "\n";
+    print " -------------------------";
+    print "\n";
+    print "$row[name] | $row[position]";
   }
+print "</pre>";
 echo "</table>";
 
 mysqli_free_result($result);
