@@ -1,10 +1,7 @@
 <?php
-
 include('connectionData.txt');
-
 $conn = mysqli_connect($server, $user, $pass, $dbname, $port)
 or die('Error connecting to MySQL server.');
-
 ?>
 
 <html>
@@ -22,11 +19,9 @@ or die('Error connecting to MySQL server.');
 <?php
   
 $team = $_POST['team'];
-
 $team = mysqli_real_escape_string($conn, $team);
 // this is a small attempt to avoid SQL injection
 // better to use prepared statements
-
 $query = "SELECT 
     p.name, pos.position
 FROM
@@ -35,7 +30,6 @@ FROM
     AND (pos.pos_code = pp.Position_pos_code)
     AND (p.name = pp.Player_name)
     WHERE t.id LIKE '%".$team."%'";
-
 ?>
 
 
@@ -49,7 +43,6 @@ FROM
 <?php
 $result = mysqli_query($conn, $query)
 or die(mysqli_error($conn));
-
 echo "<table border='1'>
 <tr>
 <th>Players</th>
@@ -57,18 +50,14 @@ echo "<table border='1'>
 </tr>";
 while($row = mysqli_fetch_array($result, MYSQLI_BOTH))  
   {
-    print "\n";
-    print " -------------------------";
-    print "\n";
-    print "$row[name] | $row[position]";
+  echo "<tr>";
+  echo "<td>" . $row[name] ."</td>";
+  echo "<td>" . $row[positio] . "</td>";
+  echo "</tr>";
   }
-print "</pre>";
 echo "</table>";
-
 mysqli_free_result($result);
-
 mysqli_close($conn);
-
 ?>
 
 <p>
@@ -81,4 +70,3 @@ of the PHP program that created this page.
 </body>
 	</center>
 </html>
-	  
