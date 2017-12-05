@@ -50,19 +50,17 @@ FROM
 $result = mysqli_query($conn, $query)
 or die(mysqli_error($conn));
 
-print "<pre>";
-print " ==========================";
-print "\n";
-print " Players";
-print "\n";
-print " ==========================";
-print "\n";
+echo "<table border='1'>
+<tr>
+<th>Players</th>
+<th>Position</th>
+</tr>";
 
 while($row = mysqli_fetch_array($result, MYSQLI_BOTH))  
   {
   echo "<tr>";
-  echo "<td>" . $row[name] . "</td>";
-  echo "<td>" . $row[position] . "</td>";
+  echo "<td>" . $row['name'] ."</td>";
+  echo "<td>" . $row['position'] . "</td>";
   echo "</tr>";
   }
 echo "</table>";
