@@ -59,7 +59,7 @@ while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
   }
 echo "</table>";
 print "Maneger:" ." ". $man;
-print "/n"
+print "\n";
 print "City:" ." ". $cname;
 mysqli_free_result($result);
 mysqli_close($conn);
