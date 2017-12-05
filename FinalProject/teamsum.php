@@ -55,8 +55,8 @@ while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
   echo "</tr>";
   }
 echo "</table>";
-print "Maneger:" ." ". $row[maneger];
-print "City:" ." ". $row[City_name];
+print "Maneger:" ." ". "$row[maneger]";
+print "City:" ." ". "$row[City_name]";
 mysqli_free_result($result);
 mysqli_close($conn);
 
