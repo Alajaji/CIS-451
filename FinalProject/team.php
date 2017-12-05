@@ -33,20 +33,16 @@ FROM
     JOIN Team t ON (t.id = p.Team_id)
     AND (pos.pos_code = pp.Position_pos_code)
     AND (p.name = pp.Player_name)
-    WHERE t.name LIKE '%".$team."%'";
+    WHERE t.id LIKE '%".$team."%'";
 
 ?>
 
-<p>
-The query:
-<p>
-<?php
-print $query;
-?>
+
+
 
 <hr>
 <p>
-print $team:
+
 <p>
 
 <?php
@@ -63,10 +59,12 @@ print "\n";
 
 while($row = mysqli_fetch_array($result, MYSQLI_BOTH))  
   {
-    print "\n";
-    print " -------------------------";
-    print "$row[name] | $row[position]";
+  echo "<tr>";
+  echo "<td>" . $row[name] . "</td>";
+  echo "<td>" . $row[position] . "</td>";
+  echo "</tr>";
   }
+echo "</table>";
 print "</pre>";
 
 mysqli_free_result($result);
