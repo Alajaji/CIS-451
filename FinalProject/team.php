@@ -65,7 +65,7 @@ while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
   {
     print "\n";
     print " -------------------------";
-    print "$row[p.name] | $row[pos.position]";
+    print "$row[name] | $row[position]";
   }
 print "</pre>";
 
