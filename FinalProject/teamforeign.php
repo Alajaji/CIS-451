@@ -61,7 +61,7 @@ while($row = mysqli_fetch_array($result, MYSQLI_BOTH))
 
   echo "<tr>";
   echo "<td>" . $row[Players] ."</td>";
-  echo "<td>" . $row[country] . "</td>";
+  echo "<td>" . $row[nationality] . "</td>";
   echo "</tr>";
   }
 echo "</table>";
