@@ -63,7 +63,7 @@ mysqli_close($conn);
 <hr>
 
 <p>
-<a href="team.txt" >Contents</a>
+<a href="teamwon.txt" >Contents</a>
 of the PHP program that created this page.   
  
 </body>
